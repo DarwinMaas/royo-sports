@@ -245,6 +245,7 @@ nav .container {
 
 .social-proof {
   margin-top: 10.5em;
+  padding-left: 1.5em;
 }
 
 h1 {
@@ -252,6 +253,12 @@ h1 {
   letter-spacing: -0.04em;
   line-height: 1.2;
   max-width: 8em;
+}
+
+.client-photo {
+  width: 3.93em;
+  border-radius: 100vw;
+  margin-left: -1.5em;
 }
 
 /*---------- Tablet Styling ----------*/
