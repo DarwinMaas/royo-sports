@@ -94,6 +94,7 @@ body {
   background-color: var(--light);
   font-family: var(--main-font);
   font-weight: 400;
+  color: var(--dark);
 }
 
 svg {
@@ -247,10 +248,10 @@ nav .container {
 
 .btn-wrap {
   display: inline-flex;
-  justify-content: star;
+  justify-content: start;
   align-items: center;
   gap: 1em;
-  padding-top: 1em;
+  margin-top: 2em;
 }
 
 .nav-links-wrap .btn {
@@ -277,6 +278,7 @@ h1 {
   letter-spacing: -0.04em;
   line-height: 1.2;
   max-width: 8em;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -310,7 +312,8 @@ h2 {
   padding-bottom: 5em;
 }
 
-#about .btn-wrap {
+#about .btn-wrap,
+#featured-training .btn-wrap {
   align-items: start;
   flex-direction: row;
   gap: 0.5em;
@@ -331,8 +334,8 @@ h2 {
   border-radius: 100vw;
 }
 
-#about h2 {
-  margin-bottom: 0.25em;
+h2 {
+  margin-bottom: 0.5em;
 }
 
 img {
@@ -364,6 +367,17 @@ img {
 .content.is--left h2 {
   margin-top: 2em;
 }
+
+path {
+  stroke-width: 4.4;
+}
+
+#featured-training {
+  background-color: var(--dark);
+  color: var(--light);
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
 /*---------- Tablet Styling ----------*/
 
 @media screen and (max-width: 991px) {
@@ -393,6 +407,10 @@ img {
 
   h3 {
     font-size: 2.25em;
+  }
+
+  h4 {
+    font-size: 1.5em;
   }
 
   #hero {
