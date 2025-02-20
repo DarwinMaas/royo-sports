@@ -6,6 +6,7 @@
   --light: #f8f9fa;
   --main-font: "Plus Jakarta Sans", serif;
   --gap: 2em;
+  --cubic-default: cubic-bezier(0.65, 0.05, 0, 1);
   --duration-default: 0.735s;
   --animation-default: var(--duration-default) var(--cubic-default);
   --section-padding: calc(3.5em + (var(--gap) * 2));
@@ -154,6 +155,9 @@ nav .container {
 
 .menu-btn {
   display: none;
+  padding: 0.75em;
+  margin: -0.75em;
+  cursor: pointer;
 }
 
 .logo-wrap {
@@ -210,6 +214,13 @@ nav .container {
   font-size: inherit;
   overflow: hidden;
   font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.btn:hover .btn-text-wrap {
+  background-color: var(--light);
+  color: var(--dark);
+  transition: 0.3s;
 }
 
 .btn-text-wrap {
@@ -223,8 +234,15 @@ nav .container {
   border: 1px solid rgba(255, 255, 255, 0.163);
 }
 
+.is--outline.is--dark .btn-text-wrap {
+  background-color: transparent;
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}
+
 .is--outline {
   color: var(--light);
+  text-align: center;
 }
 
 .btn-wrap {
@@ -261,6 +279,12 @@ h1 {
   max-width: 8em;
 }
 
+h2 {
+  font-size: 4em;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
 .client-photo,
 .arrow-wrap {
   width: 3.93em;
@@ -281,6 +305,65 @@ h1 {
   align-items: center;
 }
 
+#about {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+#about .btn-wrap {
+  align-items: start;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+#about .arrow-wrap {
+  margin-left: 0;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.benefit-icon {
+  background-color: var(--brand);
+  width: 7.375em;
+  height: 7.375em;
+  display: flex;
+  justify-content: center;
+  border-radius: 100vw;
+}
+
+#about h2 {
+  margin-bottom: 0.25em;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#about img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-container {
+  margin-top: 2.5em;
+}
+
+.img-wrap {
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.stats-wrap {
+  margin: 2em 0 4.6em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.content.is--left h2 {
+  margin-top: 2em;
+}
 /*---------- Tablet Styling ----------*/
 
 @media screen and (max-width: 991px) {
@@ -304,6 +387,14 @@ h1 {
     font-size: 3em;
   }
 
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 2.25em;
+  }
+
   #hero {
     text-align: center;
     padding-top: 8em;
@@ -317,5 +408,36 @@ h1 {
 
   .social-proof {
     flex-direction: column;
+  }
+
+  .img-wrap.right {
+    display: none;
+  }
+
+  .img-wrap {
+    width: 100%;
+    height: 15em;
+  }
+
+  .benefit-icon {
+    width: 4.5em;
+    height: 4.5em;
+  }
+
+  .benefit-icon svg {
+    width: 2em;
+  }
+
+  .benefit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  .benefit-content_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
   }
 }
