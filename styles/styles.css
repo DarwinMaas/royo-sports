@@ -216,12 +216,25 @@ nav .container {
   overflow: hidden;
   font-weight: 500;
   letter-spacing: -0.03em;
+  text-align: center;
 }
 
 .btn:hover .btn-text-wrap {
+  background-color: #93cb1b;
+  color: var(--dark);
+  transition: 0.2s;
+}
+
+.btn.is--outline:hover .btn-text-wrap {
   background-color: var(--light);
   color: var(--dark);
-  transition: 0.3s;
+  transition: 0.2s;
+}
+
+.btn.is--outline.is--dark:hover .btn-text-wrap {
+  background-color: var(--dark);
+  color: var(--light);
+  transition: 0.2s;
 }
 
 .btn-text-wrap {
@@ -252,6 +265,14 @@ nav .container {
   align-items: center;
   gap: 1em;
   margin-top: 2em;
+}
+
+#featured-training .btn-wrap {
+  margin-top: 0;
+}
+
+#featured-training .btn {
+  width: 100%;
 }
 
 .nav-links-wrap .btn {
@@ -378,6 +399,64 @@ path {
   padding-top: 5em;
   padding-bottom: 5em;
 }
+
+.training-img-wrap {
+  border-radius: 1em;
+  overflow: hidden;
+  height: 24.25em;
+}
+
+.featured-training-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75em;
+  padding: 1em 0.25em 3.75em;
+}
+
+.link {
+  display: flex;
+  gap: 0.25em;
+  align-items: center;
+  color: var(--brand);
+}
+
+.link-icon path {
+  fill: var(--brand);
+}
+
+.featured-training-wrap {
+  margin-top: 2.5em;
+}
+
+.marquee-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee svg {
+  min-width: 0.5em;
+}
+
+.marquee-p {
+  text-wrap: nowrap;
+}
+
+.marquee {
+  display: flex;
+  font-size: 4em;
+  font-weight: 600;
+  gap: 0.5em;
+  padding-right: 0.5em;
+}
+
+#footer {
+  border-top: 1.5px solid rgba(255, 255, 255, 0.138);
+  padding-top: 6.25em;
+  padding-bottom: 1.25em;
+  background-color: var(--dark);
+  color: var(--light);
+}
 /*---------- Tablet Styling ----------*/
 
 @media screen and (max-width: 991px) {
@@ -457,5 +536,26 @@ path {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+  }
+
+  #cta {
+    color: var(--light);
+    background-color: var(--dark);
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  #cta h2 {
+    font-size: 4.5em;
+    margin-bottom: 0.25em;
+  }
+
+  #cta .content {
+    text-align: center;
+  }
+
+  #cta .social-proof {
+    text-align: center;
+    margin-top: 4em;
   }
 }
