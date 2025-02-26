@@ -396,8 +396,7 @@ path {
 #featured-training {
   background-color: var(--dark);
   color: var(--light);
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 6.75em 0;
 }
 
 .training-img-wrap {
@@ -452,11 +451,77 @@ path {
 
 #footer {
   border-top: 1.5px solid rgba(255, 255, 255, 0.138);
-  padding-top: 6.25em;
+  padding-top: 5.25em;
   padding-bottom: 1.25em;
   background-color: var(--dark);
   color: var(--light);
 }
+
+.footer-logo svg {
+  width: 11.25em;
+}
+
+#footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75em;
+}
+
+.col-title {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.link-col {
+  margin-top: 2em;
+}
+
+#footer a {
+  font-size: 0.875em;
+  font-weight: 400;
+  opacity: 60%;
+}
+
+.footer-logo {
+  opacity: 100%;
+}
+
+#footer a:hover {
+  opacity: 100%;
+  text-decoration: underline;
+}
+
+.link-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.copyright {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.118);
+}
+
+.copyright-links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em 0;
+}
+
+.copyright-p {
+  font-size: 0.75em;
+  text-align: center;
+}
+
 /*---------- Tablet Styling ----------*/
 
 @media screen and (max-width: 991px) {
